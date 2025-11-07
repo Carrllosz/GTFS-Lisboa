@@ -72,11 +72,6 @@ Após cada remoção:
 - registra-se a degradação da conectividade
 
 ### **6. Métrica de Robustez (AUC Normalizado)**
-
-\[
-AUC = \frac{100}{χ} \sum_{i=0}^{χ} \frac{τ_i}{V}
-\]
-
 Quanto **menor** o AUC → **menor robustez**.
 
 ---
@@ -104,5 +99,6 @@ Contudo, **hubs intermodais** são pontos de vulnerabilidade crítica.
 Aparício, J. T., Arsénio, E., & Henriques, R. (2022).  
 *Assessing robustness in multimodal transportation systems: a case study in Lisbon.*  
 European Transport Research Review, 14(1). https://doi.org/10.1186/s12544-022-00552-3
+
 
 
