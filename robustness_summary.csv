@@ -1,7 +1,0 @@
-strategy,Frac. total removida,Menor SCC final,Maior APL observado
-initial_betweenness,1.0,0,35.457060566552094
-initial_degree,1.0,0,47.06594692857789
-multimodal_hubs,1.0,0,19.06414332884921
-random,1.0,0,15.465915440018692
-recalc_betweenness,1.0,0,19.06414332884921
-recalc_degree,0.5000596587519389,1199,20.533355506751665
