@@ -4,14 +4,14 @@ _Reprodução metodológica do artigo:_
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Este repositório contém a **replicação metodológica completa** do estudo que avalia a **robustez estrutural da rede de transporte público multimodal da Área Metropolitana de Lisboa**, considerando ônibus, metro, trem e ferry, modelados como uma **rede multilayer (multiplex)**.
 O objetivo central é analisar como **falhas (acidentais ou direcionadas)** afetam a **conectividade global** do sistema e identificar **estações críticas** para a operação da rede.
 
 ---
 
-## 🧱 Dados Utilizados
+## Dados Utilizados
 
 - **GTFS** de cada operador:
   - Carris Metropolitana
@@ -31,7 +31,7 @@ Arquivos necessários por operador:
 
 ---
 
-## 🛠 Metodologia (Passo a Passo)
+## Metodologia (Passo a Passo)
 
 ### **1. Construção das Redes Monomodais**
 Para cada modo (ônibus, metro, trem, barco):
@@ -76,7 +76,7 @@ Quanto **menor** o AUC → **menor robustez**.
 
 ---
 
-## 📊 Visualizações
+## Visualizações
 
 As figuras geradas reproduzem as do artigo:
 
@@ -87,18 +87,19 @@ As figuras geradas reproduzem as do artigo:
 
 ---
 
-## 💡 Interpretação Esperada
+## Interpretação Esperada
 
 A rede multimodal de Lisboa apresenta **alta robustez estrutural**, mantendo conectividade global mesmo após remoções extensas.  
 Contudo, **hubs intermodais** são pontos de vulnerabilidade crítica.
 
 ---
 
-## 📚 Referência
+## Referência
 
 Aparício, J. T., Arsénio, E., & Henriques, R. (2022).  
 *Assessing robustness in multimodal transportation systems: a case study in Lisbon.*  
 European Transport Research Review, 14(1). https://doi.org/10.1186/s12544-022-00552-3
+
 
 
 
