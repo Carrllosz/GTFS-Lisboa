@@ -72,7 +72,50 @@ Após cada remoção:
 - registra-se a degradação da conectividade
 
 ### **6. Métrica de Robustez (AUC Normalizado)**
-Quanto **menor** o AUC → **menor robustez**.
+Nesta etapa foi implementada a métrica utilizada no artigo original:
+- A curva SCC × fração de nós removidos é integrada via AUC (Área Sob a Curva).
+- O AUC é então normalizado, permitindo comparar diferentes modos e estratégias.z
+- Quanto menor o AUC, menor a robustez do sistema.
+
+**Decisões tomadas**:
+- Manter o cálculo do AUC exatamente como no artigo para garantir replicação fiel.
+- Normalização aplicada por modo e por estratégia.
+- Correções foram feitas para garantir consistência na ordenação da fração removida e evitar curvas invertidas.
+
+
+### **7. Visualização dos Resultados**
+Foram geradas todas as visualizações equivalentes às do estudo:
+- Distribuição de grau (em escala log-log).
+- Distribuição de betweenness (em escala log-log).
+- Tamanho da maior SCC × fração removida (normalizado e bruto).
+- APL × fração removida.
+- Número de componentes isolados × iterações.
+
+**Ajustes realizados**:
+
+- O script foi adaptado para ler os CSVs gerados nas etapas anteriores (metrics_summary.csv, results_all_strategies.csv).
+- Correções foram necessárias devido à ausência das colunas degree e betweenness no arquivo original, exigindo reconstrução dessas métricas.
+- Foram mantidos os estilos gráficos do artigo (cores, eixos, escalas e estrutura visual).
+- Todos os gráficos foram salvos em /Etapa 7/figures.
+
+### **8. Comparação Entre Modos e Estratégias**
+Nesta etapa foi analisada a capacidade de cada modo de transporte resistir aos ataques estruturais.
+
+Como o arquivo results_modes_strategies.csv já trazia os valores de AUC normalizados, o script foi ajustado para:
+- Identificar automaticamente o formato do CSV.
+- Usar diretamente a coluna auc_normalized, sem recalcular a curva SCC × remoção.
+- Consolidar e comparar o AUC médio por modo e por estratégia.
+
+**Resultados obtidos**:
+
+- **Modo mais resiliente**: FERTAGUS
+Apresentou o maior AUC médio, indicando perda lenta de conectividade.
+
+- **Modo mais vulnerável**: SULFERTAGUS
+Baixa redundância estrutural, conectividade cai rapidamente.
+
+- **Estratégia mais danosa**: recalc_betweenness
+Atualizar a betweenness a cada remoção maximiza a fragmentação da rede.
 
 ---
 
@@ -99,6 +142,7 @@ Contudo, **hubs intermodais** são pontos de vulnerabilidade crítica.
 Aparício, J. T., Arsénio, E., & Henriques, R. (2022).  
 *Assessing robustness in multimodal transportation systems: a case study in Lisbon.*  
 European Transport Research Review, 14(1). https://doi.org/10.1186/s12544-022-00552-3
+
 
 
 
