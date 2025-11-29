@@ -1,0 +1,6 @@
+strategy,AUC_mean
+recalc_betweenness,7.833397726151658
+recalc_degree,8.000054276407202
+initial_degree,11.386482421767052
+initial_betweenness,11.661456460203985
+random,16.47325381058722

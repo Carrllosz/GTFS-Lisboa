@@ -1,0 +1,52 @@
+=== INTERPRETAÇÃO FINAL — ETAPA 9 ===
+
+
+1. Robustez por Modal (AUC%)
+
+- FERTAGUS: 22.857%
+- TRANSTEJO: 19.259%
+- METRO_LISBOA: 11.272%
+- CARRIS: 9.466%
+- RODOVIARIA_LISBOA: 6.574%
+- TST: 6.185%
+- SULFERTAGUS: 1.883%
+
+
+2. Robustez por Estratégia de Remoção
+
+- recalc_betweenness: 7.833%
+- recalc_degree: 8.000%
+- initial_degree: 11.386%
+- initial_betweenness: 11.661%
+- random: 16.473%
+
+
+3. Melhor Modal por Estratégia
+- initial_betweenness → FERTAGUS (22.449%)
+- initial_degree → FERTAGUS (28.571%)
+- random → FERTAGUS (26.020%)
+- recalc_betweenness → TRANSTEJO (19.753%)
+- recalc_degree → FERTAGUS (17.857%)
+
+
+4. Interpretação Geral
+
+- Estratégias recalculadas (recalc_degree / recalc_betweenness)
+  são as mais destrutivas, pois sempre removem o nó mais crítico atual.
+
+- Remoções baseadas em betweenness afetam hubs estruturais,
+  provocando fragmentação rápida da rede.
+
+- Remoção aleatória é a menos danosa, pois afeta principalmente
+  nós periféricos com pouca centralidade.
+
+- Modais ferroviários (especialmente FERTAGUS e TRANSTEJO) 
+  demonstram maior resiliência estrutural.
+
+- Modais rodoviários (TST, RODOVIÁRIA, SULFERTAGUS) 
+  são os mais vulneráveis, com baixa redundância.
+
+Conclusão:
+A rede multimodal de Lisboa apresenta comportamento típico
+de redes complexas heterogêneas: robusta a falhas aleatórias,
+mas altamente vulnerável a ataques direcionados que removem hubs.
