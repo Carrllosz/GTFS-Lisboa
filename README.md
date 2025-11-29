@@ -117,6 +117,25 @@ Baixa redundância estrutural, conectividade cai rapidamente.
 - **Estratégia mais danosa**: recalc_betweenness
 Atualizar a betweenness a cada remoção maximiza a fragmentação da rede.
 
+### **9. Análise e Conclusões de Robustez**
+Na Etapa 9 foram analisados os resultados finais das simulações de falhas realizadas sobre cada modal e para cada estratégia de remoção de nós. 
+Utilizou-se o valor AUC_percent, que representa o quanto da conectividade da rede é preservada ao longo das remoções.
+
+Foram gerados três produtos principais:
+
+- AUC médio por modalidade
+- AUC médio por estratégia
+- Melhor modal para cada estratégia
+
+Principais Resultados
+
+- Modais mais robustos: FERTAGUS e TRANSTEJO.
+- Modais menos robustos: SULFERTAGUS, TST, Rodoviária de Lisboa.
+- Estratégia mais destrutiva: recalc_betweenness.
+- Estratégia menos danosa: random.
+
+Esta etapa conclui que a rede multimodal de Lisboa é resistente a falhas aleatórias, mas altamente vulnerável a falhas direcionadas em hubs de alta intermediação, reforçando a importância da redundância estrutural em pontos de transferência.
+
 ---
 
 ## Visualizações
@@ -142,6 +161,7 @@ Contudo, **hubs intermodais** são pontos de vulnerabilidade crítica.
 Aparício, J. T., Arsénio, E., & Henriques, R. (2022).  
 *Assessing robustness in multimodal transportation systems: a case study in Lisbon.*  
 European Transport Research Review, 14(1). https://doi.org/10.1186/s12544-022-00552-3
+
 
 
 
